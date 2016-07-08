@@ -1,7 +1,11 @@
 var fs = require('fs');
 
+//create empty array to store numbers
 var numArray = [];
 
+
+//function to retrieve text file, and convert to to numbers.
+//Then callback a function when done
 function numsToArray(callback){
   fs.readFile('numbers.txt', 'utf-8', function(err, fileContents) {
     numArray = fileContents.split(', ');
@@ -12,7 +16,9 @@ function numsToArray(callback){
   })
 }
 
+//callback function to log required values.
 function done(array) {
+  //calls the get 
   console.log(getValues(numArray));
 }
 
