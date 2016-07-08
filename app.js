@@ -1,8 +1,6 @@
 var fs = require('fs');
 
 var numArray = [];
-//Read the number file
-//add number string
 
 function numsToArray(callback){
   fs.readFile('numbers.txt', 'utf-8', function(err, fileContents) {
